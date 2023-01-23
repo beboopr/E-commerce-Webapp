@@ -1,12 +1,21 @@
-// import { Children } from "react";
+import { Children } from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-// import Footer from "./components/Footer/Footer";
-// import Navbar from "./components/Navbar/Navbar";
-import Home from "./Home/Home";
-import Product from "./Product/Product";
-import Products from "./Products/Products";
-// import "./app.scss"
-import './App.css';
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+import Product from "./pages/Product/Product";
+import Products from "./pages/products/Products";
+import './App.scss';
+
+const Layout = () => {
+  return (
+    <div className="app">
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </div>
+  );
+};
 
 const router = createBrowserRouter([
   {
